@@ -1,0 +1,488 @@
+.referral-nav-back {
+    margin-bottom: 2rem;
+    display: flex;
+}
+
+.referral-back-link {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.5rem;
+    color: var(--color-text-secondary);
+    font-size: 0.9rem;
+    transition: color 0.2s;
+    padding: 0.5rem 1rem;
+    border-radius: 8px;
+    background: rgba(255, 255, 255, 0.03);
+}
+
+.referral-back-link:hover {
+    color: var(--color-primary);
+    background: rgba(255, 255, 255, 0.08);
+}
+
+.referral-title-bn {
+    font-family: inherit;
+    font-size: clamp(2.2rem, 6vw, 3.5rem);
+    font-weight: 800;
+    margin-bottom: 0.5rem;
+}
+
+.referral-date {
+    font-size: 1rem;
+    color: var(--color-primary);
+    opacity: 0.9;
+    letter-spacing: 0.5px;
+}
+
+.referral-section {
+    padding: 4rem 0 6rem;
+    background-color: var(--color-bg-dark);
+}
+
+.referral-layout {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 2.5rem;
+}
+
+@media (min-width: 992px) {
+    .referral-layout {
+        grid-template-columns: 1.8fr 1fr;
+    }
+}
+
+/* Left Content Column */
+.referral-main {
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+}
+
+.referral-card {
+    background: rgba(255, 255, 255, 0.015);
+    border: 1px solid rgba(255, 255, 255, 0.05);
+    border-radius: 24px;
+    padding: 2rem;
+    backdrop-filter: blur(10px);
+    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.3);
+}
+
+@media (min-width: 768px) {
+    .referral-card {
+        padding: 3rem;
+    }
+}
+
+/* Image styling */
+.referral-cover-wrap {
+    position: relative;
+    width: 100%;
+    border-radius: 16px;
+    overflow: hidden;
+    margin-bottom: 2.5rem;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.referral-cover-img {
+    width: 100%;
+    height: auto;
+    display: block;
+    transition: transform 0.5s ease;
+}
+
+.referral-cover-wrap:hover .referral-cover-img {
+    transform: scale(1.02);
+}
+
+.referral-cover-glow {
+    position: absolute;
+    inset: 0;
+    background: radial-gradient(circle at 50% 50%, rgba(0, 198, 255, 0.15) 0%, transparent 80%);
+    pointer-events: none;
+}
+
+/* Intro and Welcome */
+.referral-intro {
+    margin-bottom: 3rem;
+    border-left: 4px solid var(--color-primary);
+    padding-left: 1.5rem;
+}
+
+.referral-welcome-msg {
+    font-size: 1.4rem;
+    font-weight: 700;
+    color: var(--color-text-white);
+    line-height: 1.5;
+    margin-bottom: 0.8rem;
+}
+
+.referral-intro-desc {
+    font-size: 1.05rem;
+    line-height: 1.8;
+    color: var(--color-text-secondary);
+}
+
+/* Block structures */
+.referral-content-block {
+    margin-bottom: 3rem;
+}
+
+.referral-block-title {
+    font-size: 1.25rem;
+    font-weight: 700;
+    color: var(--color-text-white);
+    margin-bottom: 1.5rem;
+    display: flex;
+    align-items: center;
+    gap: 0.75rem;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.08);
+    padding-bottom: 0.75rem;
+}
+
+.icon-badge-inline {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: 32px;
+    height: 32px;
+    border-radius: 8px;
+    background: rgba(0, 198, 255, 0.1);
+    color: var(--color-primary);
+}
+
+/* Step-by-Step Referral Instructions */
+.referral-steps {
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+}
+
+.referral-step-item {
+    display: flex;
+    gap: 1.2rem;
+    background: rgba(255, 255, 255, 0.01);
+    border: 1px solid rgba(255, 255, 255, 0.03);
+    padding: 1.5rem;
+    border-radius: 16px;
+    align-items: flex-start;
+    transition: transform 0.2s, background 0.2s;
+}
+
+.referral-step-item:hover {
+    transform: translateY(-2px);
+    background: rgba(255, 255, 255, 0.02);
+    border-color: rgba(255, 255, 255, 0.06);
+}
+
+.referral-step-num {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 36px;
+    height: 36px;
+    border-radius: 50%;
+    background: linear-gradient(135deg, var(--color-primary), #0072ff);
+    color: white;
+    font-weight: bold;
+    font-size: 1.1rem;
+    flex-shrink: 0;
+    box-shadow: 0 4px 10px rgba(0, 198, 255, 0.3);
+}
+
+.referral-step-body {
+    font-size: 1rem;
+    line-height: 1.7;
+    color: var(--color-text-secondary);
+}
+
+.referral-step-body strong {
+    color: var(--color-text-white);
+}
+
+/* Sign Up Button Custom Styles mimicking original but highly professional */
+.referral-signup-btn-container {
+    margin: 1.25rem 0 0.5rem;
+}
+
+.referral-signup-btn {
+    display: inline-flex;
+    align-items: center;
+    gap: 1.5rem;
+    background: linear-gradient(135deg, #374151 0%, #1f2937 100%);
+    border: 1px solid rgba(255, 255, 255, 0.15);
+    color: #f3f4f6;
+    font-weight: 600;
+    font-size: 1rem;
+    padding: 0.75rem 1.75rem;
+    border-radius: 9999px;
+    text-decoration: none;
+    transition: all 0.3s ease;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.25);
+    cursor: pointer;
+}
+
+.referral-signup-btn:hover {
+    background: linear-gradient(135deg, #1f2937 0%, #111827 100%);
+    border-color: var(--color-primary);
+    color: white;
+    box-shadow: 0 6px 20px rgba(0, 198, 255, 0.2);
+    transform: translateY(-2px);
+}
+
+.referral-btn-icon-wrap {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 24px;
+    height: 24px;
+    border-radius: 50%;
+    background: #3b82f6;
+    color: white;
+    transition: transform 0.3s ease;
+}
+
+.referral-signup-btn:hover .referral-btn-icon-wrap {
+    transform: translateX(3px);
+    background: var(--color-primary);
+}
+
+/* Reward points description */
+.referral-reward-txt {
+    font-size: 1.05rem;
+    line-height: 1.8;
+    color: var(--color-text-secondary);
+}
+
+/* Points Table style */
+.referral-table-container {
+    overflow-x: auto;
+    border-radius: 12px;
+    border: 1px solid rgba(255, 255, 255, 0.08);
+    background: rgba(255, 255, 255, 0.005);
+}
+
+.referral-table-bn {
+    width: 100%;
+    border-collapse: collapse;
+    text-align: left;
+}
+
+.referral-table-bn th {
+    background: rgba(0, 198, 255, 0.05);
+    font-size: 1rem;
+    font-weight: 700;
+    color: var(--color-text-white);
+    padding: 1.1rem;
+    border-bottom: 2px solid rgba(255, 255, 255, 0.1);
+}
+
+.referral-table-bn td {
+    padding: 1.1rem;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.06);
+    color: var(--color-text-secondary);
+    font-size: 1rem;
+}
+
+.referral-table-bn tr:last-child td {
+    border-bottom: none;
+}
+
+.referral-table-bn tr:hover td {
+    background: rgba(255, 255, 255, 0.015);
+    color: var(--color-text-white);
+}
+
+.product-cell-wrap {
+    display: flex;
+    align-items: center;
+}
+
+.points-badge {
+    display: inline-flex;
+    align-items: center;
+    padding: 0.4rem 0.8rem;
+    border-radius: 6px;
+    background: rgba(0, 198, 255, 0.15);
+    color: var(--color-primary);
+    font-weight: 700;
+    font-size: 0.9rem;
+}
+
+/* Terms and Conditions list */
+.referral-terms-list {
+    padding-left: 1.25rem;
+    display: flex;
+    flex-direction: column;
+    gap: 0.85rem;
+    color: var(--color-text-secondary);
+    font-size: 0.95rem;
+    line-height: 1.7;
+}
+
+.referral-terms-list li::marker {
+    color: var(--color-primary);
+    font-weight: bold;
+}
+
+.referral-terms-list strong {
+    color: var(--color-text-white);
+}
+
+/* Note box disclaimer */
+.referral-note-box {
+    background: rgba(239, 68, 68, 0.04);
+    border: 1px dashed rgba(239, 68, 68, 0.2);
+    border-radius: 16px;
+    padding: 1.5rem;
+    margin-top: 3rem;
+}
+
+.referral-note-header {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    color: #ef4444;
+    font-weight: bold;
+    font-size: 1.1rem;
+    margin-bottom: 0.5rem;
+}
+
+.referral-note-box p {
+    color: var(--color-text-secondary);
+    font-size: 0.95rem;
+    line-height: 1.6;
+    margin: 0;
+}
+
+/* Sidebar Column */
+.referral-sidebar {
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+}
+
+.referral-sidebar-card {
+    background: rgba(255, 255, 255, 0.015);
+    border: 1px solid rgba(255, 255, 255, 0.05);
+    border-radius: 20px;
+    padding: 2rem;
+    position: relative;
+    overflow: hidden;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
+}
+
+.sidebar-card-title {
+    font-size: 1.1rem;
+    font-weight: bold;
+    color: var(--color-text-white);
+    margin-bottom: 0.75rem;
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    letter-spacing: 0.5px;
+}
+
+.sidebar-card-desc {
+    font-size: 0.9rem;
+    color: var(--color-text-secondary);
+    line-height: 1.5;
+    margin-bottom: 1.5rem;
+}
+
+.referral-share-buttons {
+    display: flex;
+    flex-direction: column;
+    gap: 0.85rem;
+}
+
+.share-btn {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 0.75rem;
+    padding: 0.8rem;
+    border-radius: 8px;
+    font-weight: 600;
+    font-size: 0.9rem;
+    text-decoration: none;
+    cursor: pointer;
+    transition: all 0.2s;
+    border: none;
+    outline: none;
+    width: 100%;
+}
+
+.share-btn-icon {
+    font-size: 1.1rem;
+    font-family: monospace;
+    font-weight: bold;
+    line-height: 1;
+}
+
+.share-btn--facebook {
+    background: #1877f2;
+    color: white;
+}
+
+.share-btn--facebook:hover {
+    background: #166fe5;
+    box-shadow: 0 4px 12px rgba(24, 119, 242, 0.3);
+}
+
+.share-btn--whatsapp {
+    background: #25d366;
+    color: white;
+}
+
+.share-btn--whatsapp:hover {
+    background: #20ba5a;
+    box-shadow: 0 4px 12px rgba(37, 211, 102, 0.3);
+}
+
+.share-btn--copy {
+    background: rgba(255, 255, 255, 0.05);
+    color: var(--color-text-white);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.share-btn--copy:hover {
+    background: rgba(255, 255, 255, 0.1);
+    border-color: rgba(255, 255, 255, 0.2);
+}
+
+/* Secondary Sidebar Block */
+.secondary-card {
+    background: linear-gradient(135deg, rgba(0, 198, 255, 0.05) 0%, rgba(0, 114, 255, 0.05) 100%);
+    border-color: rgba(0, 198, 255, 0.15);
+}
+
+.pricing-promo-head {
+    display: flex;
+    align-items: center;
+    gap: 0.75rem;
+    margin-bottom: 0.75rem;
+}
+
+.pricing-promo-icon {
+    color: var(--color-primary);
+}
+
+.pricing-promo-head h4 {
+    font-size: 1.1rem;
+    font-weight: bold;
+    color: var(--color-text-white);
+    margin: 0;
+}
+
+.secondary-card p {
+    font-size: 0.9rem;
+    color: var(--color-text-secondary);
+    line-height: 1.5;
+    margin-bottom: 1.5rem;
+}
+
+.btn-full {
+    width: 100%;
+    justify-content: center;
+}

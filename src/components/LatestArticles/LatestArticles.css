@@ -1,0 +1,191 @@
+/* ==========================================================================
+   RM COMMUNICATION LTD - LATEST ARTICLES COMPONENT STYLES
+   ========================================================================== */
+
+.latest-articles {
+    background-color: var(--color-bg-secondary);
+}
+
+.latest-articles__grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 1.5rem;
+    margin-top: 3rem;
+}
+
+.latest-articles__card {
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+    cursor: pointer;
+    padding: 1.75rem;
+    transition: all var(--transition-normal);
+    background: var(--color-bg-card);
+    border: 1px solid var(--color-border);
+    border-radius: var(--radius-lg);
+    position: relative;
+    overflow: hidden;
+}
+
+.latest-articles__card::after {
+    content: '';
+    position: absolute;
+    inset: 0;
+    border: 1px solid transparent;
+    border-radius: inherit;
+    background: var(--gradient-card-border) border-box;
+    mask: linear-gradient(#fff 0 0) padding-box, linear-gradient(#fff 0 0);
+    -webkit-mask: linear-gradient(#fff 0 0) padding-box, linear-gradient(#fff 0 0);
+    -webkit-mask-composite: destination-out;
+    mask-composite: exclude;
+    opacity: 0;
+    transition: opacity var(--transition-normal);
+}
+
+.latest-articles__card:hover {
+    background: var(--color-bg-card-hover);
+    border-color: var(--color-border-hover);
+    box-shadow: var(--shadow-card-hover);
+    transform: translateY(-5px);
+}
+
+.latest-articles__card:hover::after {
+    opacity: 1;
+}
+
+.latest-articles__card-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 1.1rem;
+}
+
+.latest-articles__card-category {
+    font-size: 0.7rem;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 0.08em;
+    padding: 0.2rem 0.6rem;
+    border-radius: var(--radius-full);
+    background: rgba(0, 198, 255, 0.06);
+    border: 1px solid rgba(0, 198, 255, 0.12);
+    color: var(--color-accent-primary);
+}
+
+.latest-articles__card-icon-wrap {
+    width: 32px;
+    height: 32px;
+    border-radius: var(--radius-sm);
+    background: rgba(255, 255, 255, 0.02);
+    border: 1px solid rgba(255, 255, 255, 0.04);
+    color: var(--color-text-secondary);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: all var(--transition-normal);
+}
+
+.latest-articles__card:hover .latest-articles__card-icon-wrap {
+    background: rgba(0, 198, 255, 0.08);
+    border-color: rgba(0, 198, 255, 0.15);
+    color: var(--color-accent-primary);
+}
+
+.latest-articles__card-body {
+    flex: 1;
+    margin-bottom: 1.25rem;
+}
+
+.latest-articles__card-title {
+    font-family: var(--font-primary);
+    font-size: 1.15rem;
+    font-weight: 700;
+    color: var(--color-text-white);
+    line-height: 1.35;
+    margin-bottom: 0.5rem;
+    transition: color var(--transition-fast);
+}
+
+.latest-articles__card:hover .latest-articles__card-title {
+    color: var(--color-accent-primary);
+}
+
+.latest-articles__card-summary {
+    font-size: 0.875rem;
+    color: var(--color-text-secondary);
+    line-height: 1.55;
+    display: -webkit-box;
+    -webkit-line-clamp: 3;
+    line-clamp: 3;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+}
+
+.latest-articles__card-meta {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    border-top: 1px solid rgba(255, 255, 255, 0.03);
+    padding-top: 1rem;
+    margin-bottom: 1rem;
+}
+
+.latest-articles__card-meta-item {
+    display: flex;
+    align-items: center;
+    gap: 0.3rem;
+    font-size: 0.75rem;
+    color: var(--color-text-muted);
+}
+
+.latest-articles__card-read-more {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.4rem;
+    font-size: 0.825rem;
+    font-weight: 600;
+    color: var(--color-accent-primary);
+    transition: gap var(--transition-fast);
+}
+
+.latest-articles__card:hover .latest-articles__card-read-more {
+    gap: 0.65rem;
+}
+
+.latest-articles__cta {
+    display: flex;
+    justify-content: center;
+    margin-top: 3.5rem;
+}
+
+/* Light Theme overrides for Latest Articles Card */
+html[data-theme='light'] .latest-articles__card-category {
+    background: rgba(0, 114, 255, 0.06);
+    border-color: rgba(0, 114, 255, 0.12);
+    color: var(--color-accent-primary);
+}
+
+html[data-theme='light'] .latest-articles__card-icon-wrap {
+    background: rgba(0, 114, 255, 0.03);
+    border-color: rgba(0, 114, 255, 0.06);
+}
+
+html[data-theme='light'] .latest-articles__card:hover .latest-articles__card-icon-wrap {
+    background: rgba(0, 114, 255, 0.08);
+    border-color: rgba(0, 114, 255, 0.15);
+}
+
+/* Responsive Breakpoints */
+@media (max-width: 992px) {
+    .latest-articles__grid {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 1.25rem;
+    }
+}
+
+@media (max-width: 600px) {
+    .latest-articles__grid {
+        grid-template-columns: 1fr;
+        gap: 1.25rem;
+    }
+}

@@ -1,0 +1,157 @@
+.howtopay__grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 1.25rem;
+  margin-bottom: 2rem;
+}
+
+.howtopay__card {
+  background: var(--color-bg-card);
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-lg);
+  padding: 1.75rem;
+  transition: all var(--transition-normal);
+  position: relative;
+  overflow: hidden;
+}
+
+.howtopay__card::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 3px;
+  background: var(--method-color, var(--color-accent-primary));
+  border-radius: var(--radius-full);
+}
+
+.howtopay__card:hover {
+  border-color: var(--color-border-hover);
+  box-shadow: var(--shadow-card-hover);
+  transform: translateY(-4px);
+}
+
+.howtopay__icon-wrap {
+  width: 50px;
+  height: 50px;
+  border-radius: var(--radius-md);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 1rem;
+  background: color-mix(in srgb, var(--method-color, #00c6ff) 12%, transparent);
+  color: var(--method-color, var(--color-accent-primary));
+  border: 1px solid color-mix(in srgb, var(--method-color, #00c6ff) 25%, transparent);
+  transition: all var(--transition-normal);
+}
+
+.howtopay__card:hover .howtopay__icon-wrap {
+  background: var(--method-color, var(--color-accent-primary));
+  color: #fff;
+  box-shadow: 0 0 20px color-mix(in srgb, var(--method-color, #00c6ff) 40%, transparent);
+}
+
+.howtopay__title {
+  font-family: var(--font-primary);
+  font-size: 1rem;
+  font-weight: 700;
+  color: var(--color-text-white);
+  margin-bottom: 0.5rem;
+}
+
+.howtopay__desc {
+  font-size: 0.85rem;
+  color: var(--color-text-secondary);
+  line-height: 1.6;
+  margin-bottom: 1.25rem;
+}
+
+.howtopay__steps {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+
+.howtopay__step {
+  display: flex;
+  align-items: center;
+  gap: 0.65rem;
+  font-size: 0.82rem;
+  color: var(--color-text-secondary);
+}
+
+.howtopay__step-num {
+  width: 20px;
+  height: 20px;
+  border-radius: 50%;
+  background: color-mix(in srgb, var(--method-color, #00c6ff) 15%, transparent);
+  color: var(--method-color, var(--color-accent-primary));
+  font-size: 0.7rem;
+  font-weight: 700;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+  border: 1px solid color-mix(in srgb, var(--method-color, #00c6ff) 25%, transparent);
+}
+
+/* CTA Bar */
+.howtopay__cta {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 1.5rem;
+  padding: 1.75rem 2rem;
+  background: linear-gradient(135deg, rgba(0, 198, 255, 0.06), rgba(0, 114, 255, 0.04));
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-lg);
+  flex-wrap: wrap;
+}
+
+.howtopay__cta-content {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+}
+
+.howtopay__cta-icon {
+  color: var(--color-accent-green);
+  flex-shrink: 0;
+}
+
+.howtopay__cta-content h3 {
+  font-family: var(--font-primary);
+  font-size: 1.05rem;
+  font-weight: 700;
+  color: var(--color-text-white);
+  margin-bottom: 0.2rem;
+}
+
+.howtopay__cta-content p {
+  font-size: 0.875rem;
+  color: var(--color-text-secondary);
+}
+
+/* Responsive */
+@media (max-width: 1024px) {
+  .howtopay__grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 580px) {
+  .howtopay__grid {
+    grid-template-columns: 1fr;
+  }
+
+  .howtopay__cta {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .howtopay__cta-content {
+    flex-direction: column;
+    text-align: center;
+  }
+}
