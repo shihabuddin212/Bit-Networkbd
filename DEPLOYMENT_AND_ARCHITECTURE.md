@@ -28,7 +28,7 @@ rm-communication-ltd/
 ├── public/                 # Static media assets (e.g. RMC_Prize.jpg, favicon)
 ├── src/
 │   ├── admin/              # Admin Panel Dashboard, logins, and settings
-│   │   ├── sections/       # Tab views: Services, Offers, Articles, Pricing, Coverage
+│   │   ├── sections/       # Tab views: Services, Offers, Articles, Pricing, Coverage, Messages
 │   │   ├── AdminLogin.tsx  # Secure mock-login portal
 │   │   ├── AdminPanel.tsx  # Admin desktop layout shell & section router
 │   │   └── admin.css       # Dedicated dashboard custom styling
@@ -52,7 +52,7 @@ To eliminate complex API backend components for this static setup, the project i
 
 ### How Data Synchronization Works
 1. **Initial Hydration (`db.ts`):** 
-   When the browser loads a page, `db.ts` checks for existing records in the browser's `localStorage` (keys: `rm_services`, `rm_offers`, `rm_articles`, etc.). If absent, it hydrates the cache using the predefined static arrays inside the file (`defaultOffers`, `defaultPricingPlans`, etc.).
+   When the browser loads a page, `db.ts` checks for existing records in the browser's `localStorage` (keys: `rm_services`, `rm_offers`, `rm_articles`, `rm_pricing`, `rm_coverage`, `rm_messages`). If absent, it hydrates the cache using the predefined static arrays inside the file (`defaultOffers`, `defaultPricingPlans`, `defaultMessages` etc.).
 2. **Global Event Broadcasting:**
    Updates made in the admin panel write directly to `localStorage` using `setStored<T>()` and dispatch a window-level custom event helper:
    ```typescript
@@ -111,7 +111,7 @@ sudo apt-get install -y nginx git
 ### Step 2: Clone & Pre-build the Application on Server
 1. Clone your project repository into the server (`/var/www/` layout is standard):
    ```bash
-   sudo git clone https://github.com/your-username/rm-communication-ltd.git /var/www/rm-comm
+   sudo git clone https://github.com/shihabuddin212/rm-communication-ltd.git /var/www/rm-comm
    cd /var/www/rm-comm
    ```
 2. Install npm dependencies and compile:
