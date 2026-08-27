@@ -1,6 +1,7 @@
 import { Link } from 'react-router-dom';
-import { Wifi, ExternalLink, Play, Mail, Phone, MapPin, Send } from 'lucide-react';
+import { Wifi, Mail, Phone, MapPin, Send } from 'lucide-react';
 import { useState } from 'react';
+import { db, type MessageItem } from '../../utils/db';
 import './Footer.css';
 
 interface FooterLink {
@@ -18,7 +19,7 @@ const footerLinks: Record<string, FooterLink[]> = {
   ],
   support: [
     { label: 'How to Pay', path: '/pay-bill' },
-    { label: 'Self-care Portal', path: 'https://selfcare.rmcommunication.com', external: true },
+    { label: 'Self-care Portal', path: 'https://selfcare.bitnetworkbd.com', external: true },
     { label: 'Articles', path: '/articles' },
     { label: 'Contact Us', path: '/contact' },
   ],
@@ -30,10 +31,6 @@ const footerLinks: Record<string, FooterLink[]> = {
   ],
 };
 
-const socials = [
-  { icon: ExternalLink, href: 'https://facebook.com', label: 'Facebook' },
-  { icon: Play, href: 'https://youtube.com', label: 'YouTube' },
-];
 
 export default function Footer() {
   const [email, setEmail] = useState('');
@@ -42,6 +39,20 @@ export default function Footer() {
   const handleSubscribe = (e: React.FormEvent) => {
     e.preventDefault();
     if (email) {
+      const newMsg: MessageItem = {
+        id: `msg-${Date.now()}`,
+        name: 'Newsletter Subscriber',
+        email: email,
+        phone: '—',
+        subject: 'other',
+        message: `This user subscribed to the newsletter: ${email}. Please add them to your updates list.`,
+        date: new Date().toISOString().replace('T', ' ').substring(0, 16),
+        status: 'unread'
+      };
+
+      const stored = db.getMessages();
+      db.saveMessages([newMsg, ...stored]);
+
       setSubStatus('done');
       setEmail('');
       setTimeout(() => setSubStatus('idle'), 3000);
@@ -59,37 +70,55 @@ export default function Footer() {
                 <Wifi size={18} strokeWidth={2.5} />
               </div>
               <div className="footer__logo-text">
-                <span className="footer__logo-name">RM Communication</span>
+                <span className="footer__logo-name">Bitnetworkbd</span>
                 <span className="footer__logo-sub">Ltd</span>
               </div>
             </Link>
-            <p className="footer__brand-desc">
-              Providing fast, reliable, and affordable broadband internet and telecom solutions across Dhaka. BTRC licensed and approved.
-            </p>
-            <div className="footer__contact-info">
-              <div className="footer__contact-item" style={{ gap: '0.4rem', flexWrap: 'wrap' }}>
-                <Phone size={13} style={{ flexShrink: 0 }} />
-                <a href="tel:09639116116">09639116116</a>
-                <span>|</span>
-                <a href="tel:01749090930">01749090930</a>
-                <span>|</span>
-                <a href="tel:01911223006">01911223006</a>
+
+            <div className="footer__contact-info" style={{ display: 'flex', flexDirection: 'column', gap: '0.45rem' }}>
+              <div style={{ display: 'flex', flexDirection: 'column', gap: '0.2rem' }}>
+                <span style={{ fontSize: '0.8rem', fontWeight: 'bold', color: 'var(--color-text-primary)' }}>Corporate Office:</span>
+                <div className="footer__contact-item" style={{ alignItems: 'flex-start' }}>
+                  <MapPin size={13} style={{ flexShrink: 0, marginTop: '3px' }} />
+                  <span>89/ 3 Water Works Road, Posta area of Lalbagh, Chawkbazar, Dhaka 1211</span>
+                </div>
+                <div className="footer__contact-item">
+                  <Phone size={13} style={{ flexShrink: 0 }} />
+                  <span>Phone: <a href="tel:09639116116">09639116116</a></span>
+                </div>
+                <div className="footer__contact-item" style={{ alignItems: 'flex-start' }}>
+                  <Phone size={13} style={{ flexShrink: 0, marginTop: '3px' }} />
+                  <div>
+                    <span>Mobile: </span>
+                    <a href="tel:01749090930">01749090930</a>, <a href="tel:01911223006">01911223006</a>
+                  </div>
+                </div>
+                <div className="footer__contact-item">
+                  <Mail size={13} style={{ flexShrink: 0 }} />
+                  <span>Email: <a href="mailto:noc@msonlinebd.com">noc@msonlinebd.com</a></span>
+                </div>
               </div>
-              <a href="mailto:rmcommunicationltd@gmail.com" className="footer__contact-item">
-                <Mail size={13} /> rmcommunicationltd@gmail.com
-              </a>
-              <div className="footer__contact-item">
-                <MapPin size={13} style={{ flexShrink: 0 }} />
-                <span>89, 3 Water Works Rd, Lalbagh, Dhaka 1211</span>
+
+              <div style={{ display: 'flex', flexDirection: 'column', gap: '0.2rem', marginTop: '0.4rem' }}>
+                <span style={{ fontSize: '0.8rem', fontWeight: 'bold', color: 'var(--color-text-primary)' }}>Branch Office:</span>
+                <div className="footer__contact-item" style={{ alignItems: 'flex-start' }}>
+                  <MapPin size={13} style={{ flexShrink: 0, marginTop: '3px' }} />
+                  <span>Dc Road-Sorno Tower Gopalgongj, Bd</span>
+                </div>
+                <div className="footer__contact-item" style={{ alignItems: 'flex-start' }}>
+                  <Phone size={13} style={{ flexShrink: 0, marginTop: '3px' }} />
+                  <div>
+                    <span>Contact Number: </span>
+                    <a href="tel:09639116116">09639116116</a> Or <a href="tel:01749090930">01749090930</a>
+                  </div>
+                </div>
+                <div className="footer__contact-item">
+                  <Mail size={13} style={{ flexShrink: 0 }} />
+                  <span>Email: <a href="mailto:admin@bitnetworkbd.com">admin@bitnetworkbd.com</a></span>
+                </div>
               </div>
             </div>
-            <div className="footer__socials">
-              {socials.map(({ icon: Icon, href, label }) => (
-                <a key={label} href={href} target="_blank" rel="noopener noreferrer" className="footer__social" aria-label={label}>
-                  <Icon size={16} />
-                </a>
-              ))}
-            </div>
+
           </div>
 
           {/* Company */}
@@ -165,8 +194,8 @@ export default function Footer() {
 
       <div className="footer__bottom">
         <div className="container footer__bottom-inner">
-          <p>© Rm Communication Ltd {new Date().getFullYear()}. All rights reserved.</p>
-          <p>Developed with ❤️ for a better Bangladesh</p>
+          <p>© Bitnetworkbd Ltd {new Date().getFullYear()}. All rights reserved.</p>
+          <p>Developed by Ms Online Software Team</p>
         </div>
       </div>
     </footer>

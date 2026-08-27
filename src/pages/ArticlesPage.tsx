@@ -29,7 +29,7 @@ export default function ArticlesPage() {
                     <span className="section-badge">Resource Hub</span>
                     <h1 className="page-hero__title">Articles &amp; <span className="highlight">Insights</span></h1>
                     <p className="page-hero__sub">
-                        Convincing research, technical updates, and guidance from the networking experts at RM Communication Ltd.
+                        Convincing research, technical updates, and guidance from the networking experts at Bitnetworkbd Ltd.
                     </p>
                 </div>
             </div>

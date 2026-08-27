@@ -24,7 +24,7 @@ export default function Services() {
                         Services &amp; <span className="highlight">Solutions</span>
                     </h2>
                     <p className="section-subtitle">
-                        Join Rm Communication today and take advantage of our comprehensive range of internet and network solutions designed for every need.
+                        Join Bitnetworkbd today and take advantage of our comprehensive range of internet and network solutions designed for every need.
                     </p>
                 </div>
 

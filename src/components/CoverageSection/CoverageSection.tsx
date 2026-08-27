@@ -31,7 +31,7 @@ export default function CoverageSection() {
               <span className="highlight">All of Dhaka City</span>
             </h2>
             <p style={{ color: 'var(--color-text-secondary)', lineHeight: 1.75, marginBottom: '2rem' }}>
-              Rm Communication Ltd is rapidly expanding its fiber optic network across Dhaka.
+              Bitnetworkbd Ltd is rapidly expanding its fiber optic network across Dhaka.
               Check if your area is covered and get connected today.
             </p>
 

@@ -1,20 +1,26 @@
-import { useState } from 'react';
-import { Mail, Phone, MapPin, Clock, Send, CheckCircle } from 'lucide-react';
+import { useState, useEffect } from 'react';
+import { useLocation } from 'react-router-dom';
+import { Mail, Phone, MapPin, Clock, Send, CheckCircle, Building2, GitBranch } from 'lucide-react';
 import { db } from '../utils/db';
 import type { MessageItem } from '../utils/db';
 import './PageCommon.css';
 import './ContactPage.css';
 
-const contactInfo = [
-  { icon: Phone, label: 'Phone', value: '09639116116 | 01749090930 | 01911223006', href: 'tel:09639116116' },
-  { icon: Mail, label: 'Email', value: 'rmcommunicationltd@gmail.com', href: 'mailto:rmcommunicationltd@gmail.com' },
-  { icon: MapPin, label: 'Address', value: '89, 3 Water Works Rd, Lalbagh, Dhaka 1211', href: '#' },
-  { icon: Clock, label: 'Support Hours', value: '24/7 — Always Available', href: null },
-];
-
 export default function ContactPage() {
+  const location = useLocation();
   const [form, setForm] = useState({ name: '', email: '', phone: '', subject: '', message: '' });
   const [status, setStatus] = useState<'idle' | 'sending' | 'done'>('idle');
+
+  useEffect(() => {
+    const state = location.state as { plan?: string } | null;
+    if (state?.plan) {
+      setForm((f) => ({
+        ...f,
+        subject: 'new-connection',
+        message: `Hello, I would like to subscribe to the "${state.plan}" package. Please get back to me.`,
+      }));
+    }
+  }, [location.state]);
 
   const handleChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement | HTMLSelectElement>) => {
     setForm({ ...form, [e.target.name]: e.target.value });
@@ -57,7 +63,8 @@ export default function ContactPage() {
 
       <section className="section contact-section">
         <div className="container contact-section__layout">
-          {/* Info cards */}
+
+          {/* Info side */}
           <div className="contact-section__info">
             <h2 className="section-title" style={{ textAlign: 'left', fontSize: '1.75rem' }}>
               We're Here to <span className="highlight">Help</span>
@@ -65,30 +72,82 @@ export default function ContactPage() {
             <p style={{ color: 'var(--color-text-secondary)', lineHeight: 1.7, marginBottom: '2rem' }}>
               Whether you're looking to sign up, need technical support, or have billing questions — reach out to us and we'll respond promptly.
             </p>
+
             <div className="contact-section__cards">
-              {contactInfo.map(({ icon: Icon, label, value, href }) => (
-                <div key={label} className="contact-section__card">
-                  <div className="contact-section__card-icon">
-                    <Icon size={20} strokeWidth={1.5} />
+
+              {/* Support Hours */}
+              <div className="contact-section__card">
+                <div className="contact-section__card-icon">
+                  <Clock size={20} strokeWidth={1.5} />
+                </div>
+                <div>
+                  <p className="contact-section__card-label">Support Hours</p>
+                  <p className="contact-section__card-value">24/7 — Always Available</p>
+                </div>
+              </div>
+
+              {/* Corporate Office */}
+              <div className="contact-section__card contact-section__card--office">
+                <div className="contact-section__card-icon" style={{ background: 'rgba(0,198,255,0.1)', border: '1px solid rgba(0,198,255,0.2)', alignSelf: 'flex-start', marginTop: '2px' }}>
+                  <Building2 size={20} strokeWidth={1.5} />
+                </div>
+                <div style={{ flex: 1 }}>
+                  <p className="contact-section__card-label" style={{ fontSize: '0.72rem', letterSpacing: '0.05em', textTransform: 'uppercase', marginBottom: '0.5rem' }}>
+                    Corporate Office
+                  </p>
+                  <div className="contact-section__office-row">
+                    <MapPin size={13} style={{ color: 'var(--color-accent-primary)', flexShrink: 0, marginTop: '3px' }} />
+                    <span>89/ 3 Water Works Road, Posta area of Lalbagh, Chawkbazar, Dhaka 1211</span>
                   </div>
-                  <div>
-                    <p className="contact-section__card-label">{label}</p>
-                    {label === 'Phone' ? (
-                      <div className="contact-section__card-value contact-section__card-links-list" style={{ display: 'flex', gap: '0.4rem', flexWrap: 'wrap' }}>
-                        <a href="tel:09639116116" className="contact-section__card-link">09639116116</a>
-                        <span>|</span>
-                        <a href="tel:01749090930" className="contact-section__card-link">01749090930</a>
-                        <span>|</span>
-                        <a href="tel:01911223006" className="contact-section__card-link">01911223006</a>
-                      </div>
-                    ) : href && href !== '#' ? (
-                      <a href={href} className="contact-section__card-value contact-section__card-link">{value}</a>
-                    ) : (
-                      <p className="contact-section__card-value">{value}</p>
-                    )}
+                  <div className="contact-section__office-row">
+                    <Phone size={13} style={{ color: 'var(--color-accent-primary)', flexShrink: 0 }} />
+                    <span>Phone: <a href="tel:09639116116" className="contact-section__card-link">09639116116</a></span>
+                  </div>
+                  <div className="contact-section__office-row">
+                    <Phone size={13} style={{ color: 'var(--color-accent-primary)', flexShrink: 0 }} />
+                    <span>
+                      Mobile:&nbsp;
+                      <a href="tel:01749090930" className="contact-section__card-link">01749090930</a>
+                      <span style={{ margin: '0 4px', color: 'var(--color-text-muted)' }}>|</span>
+                      <a href="tel:01911223006" className="contact-section__card-link">01911223006</a>
+                    </span>
+                  </div>
+                  <div className="contact-section__office-row">
+                    <Mail size={13} style={{ color: 'var(--color-accent-primary)', flexShrink: 0 }} />
+                    <a href="mailto:noc@msonlinebd.com" className="contact-section__card-link">noc@msonlinebd.com</a>
                   </div>
                 </div>
-              ))}
+              </div>
+
+              {/* Branch Office */}
+              <div className="contact-section__card contact-section__card--office">
+                <div className="contact-section__card-icon" style={{ background: 'rgba(124,58,237,0.1)', border: '1px solid rgba(124,58,237,0.2)', color: '#a78bfa', alignSelf: 'flex-start', marginTop: '2px' }}>
+                  <GitBranch size={20} strokeWidth={1.5} />
+                </div>
+                <div style={{ flex: 1 }}>
+                  <p className="contact-section__card-label" style={{ fontSize: '0.72rem', letterSpacing: '0.05em', textTransform: 'uppercase', marginBottom: '0.5rem' }}>
+                    Branch Office
+                  </p>
+                  <div className="contact-section__office-row">
+                    <MapPin size={13} style={{ color: '#a78bfa', flexShrink: 0, marginTop: '3px' }} />
+                    <span>Dc Road-Sorno Tower, Gopalganj, Bangladesh</span>
+                  </div>
+                  <div className="contact-section__office-row">
+                    <Phone size={13} style={{ color: '#a78bfa', flexShrink: 0 }} />
+                    <span>
+                      Contact:&nbsp;
+                      <a href="tel:09639116116" className="contact-section__card-link">09639116116</a>
+                      <span style={{ margin: '0 6px', color: 'var(--color-text-muted)' }}>Or</span>
+                      <a href="tel:01749090930" className="contact-section__card-link">01749090930</a>
+                    </span>
+                  </div>
+                  <div className="contact-section__office-row">
+                    <Mail size={13} style={{ color: '#a78bfa', flexShrink: 0 }} />
+                    <a href="mailto:admin@bitnetworkbd.com" className="contact-section__card-link">admin@bitnetworkbd.com</a>
+                  </div>
+                </div>
+              </div>
+
             </div>
           </div>
 

@@ -10,7 +10,7 @@ export default function CoveragePage() {
         <div className="container">
           <span className="section-badge">Coverage</span>
           <h1 className="page-hero__title">Our <span className="highlight">Coverage Areas</span></h1>
-          <p className="page-hero__sub">Rm Communication is rapidly expanding its fiber network across Dhaka. Check if your area is covered and get connected today.</p>
+          <p className="page-hero__sub">Bitnetworkbd is rapidly expanding its fiber network across Dhaka. Check if your area is covered and get connected today.</p>
         </div>
       </div>
       <CoverageSection />

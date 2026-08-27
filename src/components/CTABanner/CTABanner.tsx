@@ -21,7 +21,7 @@ export default function CTABanner() {
               Locate Our <span className="highlight">Coverage Area</span>
             </h2>
             <p style={{ color: 'var(--color-text-secondary)', maxWidth: '550px', lineHeight: 1.7 }}>
-              Rm Communication is spread almost everywhere in Dhaka city. Check the availability
+              Bitnetworkbd is spread almost everywhere in Dhaka city. Check the availability
               of all coverage areas and get connected today.
             </p>
           </div>

@@ -63,8 +63,8 @@ export default function Navbar() {
               <Wifi size={20} strokeWidth={2.5} />
             </div>
             <div className="navbar__logo-text">
-              <span className="navbar__logo-name">RM</span>
-              <span className="navbar__logo-sub">Communication Ltd</span>
+              <span className="navbar__logo-name">Bitnetworkbd</span>
+              <span className="navbar__logo-sub">Internet & Telecom</span>
             </div>
           </Link>
 
@@ -115,8 +115,8 @@ export default function Navbar() {
               <Wifi size={18} strokeWidth={2.5} />
             </div>
             <div className="navbar__logo-text">
-              <span className="navbar__logo-name">RM</span>
-              <span className="navbar__logo-sub">Communication Ltd</span>
+              <span className="navbar__logo-name">Bitnetworkbd</span>
+              <span className="navbar__logo-sub">Internet & Telecom</span>
             </div>
           </Link>
           <div className="mobile-menu__header-actions">

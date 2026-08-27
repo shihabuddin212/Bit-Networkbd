@@ -31,7 +31,7 @@ const reasons = [
   {
     icon: Users,
     title: 'Trusted by Thousands',
-    description: 'Over 10,000 happy customers across Dhaka trust Rm Communication for daily connectivity.',
+    description: 'Over 10,000 happy customers across Dhaka trust Bitnetworkbd for daily connectivity.',
   },
 ];
 
@@ -53,7 +53,7 @@ export default function WhyUs() {
         <div className={`section-header ${inView ? 'animate-fade-in-up' : 'pre-animate'}`}>
           <span className="section-badge">Why Choose Us</span>
           <h2 className="section-title">
-            Why Rm Communication Is
+            Why Bitnetworkbd Is
             <br />
             <span className="highlight">Your Best Choice?</span>
           </h2>

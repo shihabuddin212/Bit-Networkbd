@@ -43,7 +43,7 @@ export default function Hero() {
           </h1>
 
           <p className="hero__description">
-            Rm Communication Ltd delivers premium broadband internet solutions for homes and businesses.
+            Bitnetworkbd Ltd delivers premium broadband internet solutions for homes and businesses.
             Enjoy uninterrupted connectivity with fiber-optic speeds and enterprise-grade reliability.
           </p>
 

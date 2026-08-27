@@ -5,12 +5,16 @@ export type Theme = 'dark' | 'light';
 const THEME_STORAGE_KEY = 'rm-theme';
 
 function getStoredTheme(): Theme {
-  if (typeof window === 'undefined') return 'dark';
+  if (typeof window === 'undefined') return 'light';
 
   try {
-    return window.localStorage.getItem(THEME_STORAGE_KEY) === 'light' ? 'light' : 'dark';
+    const saved = window.localStorage.getItem(THEME_STORAGE_KEY);
+    if (saved === 'dark' || saved === 'light') {
+      return saved;
+    }
+    return 'light';
   } catch {
-    return 'dark';
+    return 'light';
   }
 }
 

@@ -9,7 +9,7 @@ const privacySections = [
         num: 1,
         title: 'Introduction & Legal Scope',
         icon: Eye,
-        content: 'RM Communication Ltd. is committed to protecting your privacy online. This Privacy Policy is formulated in compliance with the Information and Communication Technology (ICT) Act 2006 (Amended), the Cyber Security Act of Bangladesh, and general regulations set forth by the Bangladesh Telecommunication Regulatory Commission (BTRC). It governs the collection, storage, processing, and usage of your personal data when subscribing to our internet services.'
+        content: 'Bitnetworkbd Ltd. is committed to protecting your privacy online. This Privacy Policy is formulated in compliance with the Information and Communication Technology (ICT) Act 2006 (Amended), the Cyber Security Act of Bangladesh, and general regulations set forth by the Bangladesh Telecommunication Regulatory Commission (BTRC). It governs the collection, storage, processing, and usage of your personal data when subscribing to our internet services.'
     },
     {
         id: 'collection',
@@ -44,7 +44,7 @@ const privacySections = [
         num: 6,
         title: 'Lawful Disclosures & Interception',
         icon: Award,
-        content: 'As a licensed ISP under BTRC, RM Communication Ltd. is legally obligated to cooperate with government agencies, security organisations, and law enforcement agencies. We will disclose necessary traffic details or subscriber information under legitimate warrants, court orders, or official directives in accordance with the laws of Bangladesh.'
+        content: 'As a licensed ISP under BTRC, Bitnetworkbd Ltd. is legally obligated to cooperate with government agencies, security organisations, and law enforcement agencies. We will disclose necessary traffic details or subscriber information under legitimate warrants, court orders, or official directives in accordance with the laws of Bangladesh.'
     },
     {
         id: 'third-party',
@@ -72,7 +72,7 @@ const privacySections = [
         num: 10,
         title: 'Updates to this Policy',
         icon: HelpCircle,
-        content: 'RM Communication Ltd. reserves the right to review and update this Privacy Policy to match evolving BTRC regulations, technological changes, and local laws. All changes will be posted here on our website. Continued usage of our services constitutes acceptance of the published policy.'
+        content: 'Bitnetworkbd Ltd. reserves the right to review and update this Privacy Policy to match evolving BTRC regulations, technological changes, and local laws. All changes will be posted here on our website. Continued usage of our services constitutes acceptance of the published policy.'
     }
 ];
 
@@ -140,7 +140,7 @@ export default function PrivacyPolicyPage() {
 
                             <div className="privacy-introduction">
                                 <p>
-                                    This policy outlines how **RM Communication Ltd.** collected data is processed. Your privacy is protected under legal frameworks established by the BTRC and Bangladesh Government. By subscribing, you agree to these guidelines terms.
+                                    This policy outlines how **Bitnetworkbd Ltd.** collected data is processed. Your privacy is protected under legal frameworks established by the BTRC and Bangladesh Government. By subscribing, you agree to these guidelines terms.
                                 </p>
                             </div>
 

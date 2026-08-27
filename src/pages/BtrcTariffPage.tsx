@@ -9,14 +9,14 @@ const tariffSections = [
         num: 1,
         title: 'Ek Desh Ek Rate Policy',
         icon: Award,
-        content: 'RM Communication Ltd. is fully compliant with the "Ek Desh, Ek Rate" (One Country, One Rate) tariff structure established by the Bangladesh Telecommunication Regulatory Commission (BTRC). Under this policy, internet packages are price-capped uniformly across all regions, unions, and districts of Bangladesh, ensuring billing transparency and removing geographic price differences.'
+        content: 'Bitnetworkbd Ltd. is fully compliant with the "Ek Desh, Ek Rate" (One Country, One Rate) tariff structure established by the Bangladesh Telecommunication Regulatory Commission (BTRC). Under this policy, internet packages are price-capped uniformly across all regions, unions, and districts of Bangladesh, ensuring billing transparency and removing geographic price differences.'
     },
     {
         id: 'retail-caps',
         num: 2,
         title: 'Approved Retail Pricing Caps',
         icon: DollarSign,
-        content: 'Our core retail internet packages are priced in strict compliance with the BTRC maximum price boundaries. The standard regulatory price caps are defined as: 5 Mbps connectivity at BDT 500/month maximum limit; 10 Mbps connectivity at BDT 800/month maximum limit; and 20 Mbps connectivity at BDT 1,200/month maximum limit. RM Communication Ltd. packages match or provide higher capability relative to these caps.'
+        content: 'Our core retail internet packages are priced in strict compliance with the BTRC maximum price boundaries. The standard regulatory price caps are defined as: 5 Mbps connectivity at BDT 500/month maximum limit; 10 Mbps connectivity at BDT 800/month maximum limit; and 20 Mbps connectivity at BDT 1,200/month maximum limit. Bitnetworkbd Ltd. packages match or provide higher capability relative to these caps.'
     },
     {
         id: 'corporate-tariff',
@@ -37,7 +37,7 @@ const tariffSections = [
         num: 5,
         title: 'Billing Audits & Disclosures',
         icon: ClipboardList,
-        content: 'RM Communication Ltd. conducts regular billing audits to confirm tariff compliance. Subscribers cannot be billed setup, maintenance, or line charges outside BTRC directives. Any fee changes requested by our network must receive BTRC certification approval before being rolled out.'
+        content: 'Bitnetworkbd Ltd. conducts regular billing audits to confirm tariff compliance. Subscribers cannot be billed setup, maintenance, or line charges outside BTRC directives. Any fee changes requested by our network must receive BTRC certification approval before being rolled out.'
     },
     {
         id: 'support-grievance',
@@ -112,7 +112,7 @@ export default function BtrcTariffPage() {
 
                             <div className="tariff-introduction">
                                 <p>
-                                    As a licensed Telecommunications & Internet Service Provider in Bangladesh, **RM Communication Ltd.** is strictly aligned with the BTRC broadband pricing mandates, promoting affordable access to digital assets for all.
+                                    As a licensed Telecommunications & Internet Service Provider in Bangladesh, **Bitnetworkbd Ltd.** is strictly aligned with the BTRC broadband pricing mandates, promoting affordable access to digital assets for all.
                                 </p>
                             </div>
 

@@ -27,6 +27,29 @@
   background: var(--color-bg-card-hover);
 }
 
+.contact-section__card--office {
+  align-items: flex-start;
+}
+
+.contact-section__office-row {
+  display: flex;
+  align-items: flex-start;
+  gap: 0.5rem;
+  font-size: 0.85rem;
+  color: var(--color-text-secondary);
+  margin-bottom: 0.35rem;
+  line-height: 1.5;
+}
+
+.contact-section__office-row a {
+  color: var(--color-accent-primary);
+  transition: opacity var(--transition-fast);
+}
+
+.contact-section__office-row a:hover {
+  opacity: 0.8;
+}
+
 .contact-section__card-icon {
   width: 44px;
   height: 44px;

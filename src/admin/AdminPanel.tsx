@@ -1,7 +1,7 @@
 import { useState } from 'react';
 import {
     Wifi, LayoutDashboard, Layers, Tag, FileText, DollarSign,
-    MapPin, LogOut, Menu, X, ChevronRight, Sun, Moon, MessageSquare
+    MapPin, LogOut, Menu, X, ChevronRight, Sun, Moon, MessageSquare, Quote
 } from 'lucide-react';
 import { useTheme } from '../hooks/useTheme';
 import AdminDashboard from './sections/AdminDashboard';
@@ -11,9 +11,10 @@ import AdminArticles from './sections/AdminArticles';
 import AdminPricing from './sections/AdminPricing';
 import AdminCoverage from './sections/AdminCoverage';
 import AdminMessages from './sections/AdminMessages';
+import AdminTestimonials from './sections/AdminTestimonials';
 import './admin.css';
 
-type Section = 'dashboard' | 'services' | 'offers' | 'articles' | 'pricing' | 'coverage' | 'messages';
+type Section = 'dashboard' | 'services' | 'offers' | 'articles' | 'pricing' | 'coverage' | 'messages' | 'testimonials';
 
 interface AdminPanelProps {
     onLogout: () => void;
@@ -27,6 +28,7 @@ const navItems = [
     { id: 'pricing' as Section, label: 'Pricing Packages', icon: DollarSign },
     { id: 'coverage' as Section, label: 'Coverage Areas', icon: MapPin },
     { id: 'messages' as Section, label: 'Messages', icon: MessageSquare },
+    { id: 'testimonials' as Section, label: 'Customers Say', icon: Quote },
 ];
 
 const sectionTitles: Record<Section, string> = {
@@ -37,6 +39,7 @@ const sectionTitles: Record<Section, string> = {
     pricing: 'Pricing Packages',
     coverage: 'Coverage Areas',
     messages: 'Messages & Inquiries',
+    testimonials: 'What Our Customers Say (Reviews)',
 };
 
 export default function AdminPanel({ onLogout }: AdminPanelProps) {
@@ -58,7 +61,7 @@ export default function AdminPanel({ onLogout }: AdminPanelProps) {
                         <Wifi size={18} strokeWidth={2.5} />
                     </div>
                     <div>
-                        <div className="admin-sidebar__logo-name">RM Communication</div>
+                        <div className="admin-sidebar__logo-name">Bitnetworkbd</div>
                         <div className="admin-sidebar__logo-sub">Admin Panel</div>
                     </div>
                 </div>
@@ -150,6 +153,7 @@ export default function AdminPanel({ onLogout }: AdminPanelProps) {
                     {activeSection === 'pricing' && <AdminPricing />}
                     {activeSection === 'coverage' && <AdminCoverage />}
                     {activeSection === 'messages' && <AdminMessages />}
+                    {activeSection === 'testimonials' && <AdminTestimonials />}
                 </div>
             </main>
         </div>

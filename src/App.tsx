@@ -3,6 +3,7 @@ import TopBar from './components/TopBar/TopBar';
 import Navbar from './components/Navbar/Navbar';
 import Footer from './components/Footer/Footer';
 import ScrollTopBtn from './components/ScrollTopBtn/ScrollTopBtn';
+import PopupBanner from './components/PopupBanner/PopupBanner';
 import HomePage from './pages/HomePage';
 import AboutPage from './pages/AboutPage';
 import PricingPage from './pages/PricingPage';
@@ -24,6 +25,7 @@ import './App.css';
 function SiteLayout() {
   return (
     <>
+      <PopupBanner />
       <TopBar />
       <Navbar />
       <main>

@@ -125,7 +125,7 @@ export default function TermsConditionsPage() {
                     <span className="section-badge">Legal Policy</span>
                     <h1 className="page-hero__title">Terms & <span className="highlight">Conditions</span></h1>
                     <p className="page-hero__sub">
-                        Please read these terms carefully. By subscribing to RM Communication Ltd.'s services, you agree to be bound by these conditions.
+                        Please read these terms carefully. By subscribing to Bitnetworkbd Ltd.'s services, you agree to be bound by these conditions.
                     </p>
                 </div>
             </div>
@@ -168,7 +168,7 @@ export default function TermsConditionsPage() {
 
                             <div className="terms-introduction">
                                 <p>
-                                    <strong>RM Communication Ltd.</strong> provides internet and communication services subject to the following Terms and Conditions. By subscribing to our services, the subscriber (<strong>"Client"</strong> or <strong>"Subscriber"</strong>) agrees to be bound by this agreement.
+                                    <strong>Bitnetworkbd Ltd.</strong> provides internet and communication services subject to the following Terms and Conditions. By subscribing to our services, the subscriber (<strong>"Client"</strong> or <strong>"Subscriber"</strong>) agrees to be bound by this agreement.
                                 </p>
                             </div>
 

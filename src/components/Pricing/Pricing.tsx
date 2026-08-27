@@ -84,12 +84,13 @@ export default function Pricing({ limit }: PricingProps) {
                   </li>
                 ))}
               </ul>
-              <a
-                href="https://selfcare.rmcommunication.com/register"
+              <Link
+                to="/contact"
+                state={{ plan: plan.name }}
                 className={`btn ${plan.featured ? 'btn-primary' : hovered === plan.id ? 'btn-primary' : 'btn-outline'} pricing__btn`}
               >
                 Get {plan.name} <ArrowRight size={14} />
-              </a>
+              </Link>
             </div>
           ))}
         </div>

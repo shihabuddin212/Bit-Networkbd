@@ -25,14 +25,14 @@ export default function SelfcareSection() {
                   <div className="selfcare__portal-dots">
                     <span /><span /><span />
                   </div>
-                  <span className="selfcare__portal-title">RM Self-care Portal</span>
+                  <span className="selfcare__portal-title">Bitnetworkbd Self-care Portal</span>
                 </div>
                 <div className="selfcare__portal-body">
                   <div className="selfcare__portal-avatar">
                     <User size={28} />
                   </div>
                   <p className="selfcare__portal-name">John Doe</p>
-                  <p className="selfcare__portal-id">Account ID: RM-00123</p>
+                  <p className="selfcare__portal-id">Account ID: BIT-00123</p>
                   <div className="selfcare__portal-stats">
                     <div className="selfcare__portal-stat">
                       <span className="selfcare__portal-stat-val">120 GB</span>
@@ -95,7 +95,7 @@ export default function SelfcareSection() {
               ))}
             </ul>
 
-            <Link to="https://selfcare.rmcommunication.com" className="btn btn-primary" style={{ marginTop: '2rem' }}>
+            <Link to="https://selfcare.bitnetworkbd.com" className="btn btn-primary" style={{ marginTop: '2rem' }}>
               Access Self-care Portal <ArrowRight size={16} />
             </Link>
           </div>

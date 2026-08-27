@@ -9,7 +9,7 @@ const refundSections = [
         num: 1,
         title: 'Scope of Policy',
         icon: ShieldCheck,
-        content: 'This Return & Refund Policy is formulated in accordance with the Consumer Rights Protection Act 2009 of Bangladesh, guidelines from the Bangladesh Telecommunication Regulatory Commission (BTRC), and circulars from Bangladesh Bank governing digital payments. This policy governs refunds for connection setup fees, advance monthly ISP packages, and hardware components supplied by RM Communication Ltd.'
+        content: 'This Return & Refund Policy is formulated in accordance with the Consumer Rights Protection Act 2009 of Bangladesh, guidelines from the Bangladesh Telecommunication Regulatory Commission (BTRC), and circulars from Bangladesh Bank governing digital payments. This policy governs refunds for connection setup fees, advance monthly ISP packages, and hardware components supplied by Bitnetworkbd Ltd.'
     },
     {
         id: 'installation',
@@ -126,7 +126,7 @@ export default function RefundPolicyPage() {
 
                             <div className="refund-introduction">
                                 <p>
-                                    At **RM Communication Ltd.**, clear terms represent our priority. The following return and refund rules are aligned with the state regulations of the People's Republic of Bangladesh.
+                                    At **Bitnetworkbd Ltd.**, clear terms represent our priority. The following return and refund rules are aligned with the state regulations of the People's Republic of Bangladesh.
                                 </p>
                             </div>
 

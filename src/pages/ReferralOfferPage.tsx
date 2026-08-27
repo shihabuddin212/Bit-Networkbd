@@ -53,10 +53,10 @@ export default function ReferralOfferPage() {
                             {/* Intro Texts */}
                             <div className="referral-intro">
                                 <h3 className="referral-welcome-msg">
-                                    Rm Communication Ltd নিয়ে এলো সকল গ্রাহকদের জন্য রেফারাল প্রোগ্রাম।
+                                    Bitnetworkbd Ltd নিয়ে এলো সকল গ্রাহকদের জন্য রেফারাল প্রোগ্রাম।
                                 </h3>
                                 <p className="referral-intro-desc">
-                                    এখন Rm Communication Ltd এর সংযোগ নতুন কাউকে রেফার করেই পেয়ে যান মাসিক বিল এ ২০০ টাকা ডিস্কাউন্ট। এছাড়া থাকছে রিডিমেবল পয়েন্টস যা দিয়ে আপনি পাচ্ছেন আকর্ষনীয় সকল গ্যাজেটস।
+                                    এখন Bitnetworkbd Ltd এর সংযোগ নতুন কাউকে রেফার করেই পেয়ে যান মাসিক বিল এ ২০০ টাকা ডিস্কাউন্ট। এছাড়া থাকছে রিডিমেবল পয়েন্টস যা দিয়ে আপনি পাচ্ছেন আকর্ষনীয় সকল গ্যাজেটস।
                                     <br />
                                     এছাড়া রেফারে নতুন সংযোগ নিলেই কানেকশন চার্জ এ থাকছে ৫০০ টাকা ডিস্কাউন্ট।
                                 </p>
@@ -76,7 +76,7 @@ export default function ReferralOfferPage() {
                                             {/* Sign Up Button (Mimicking the image but highly polished) */}
                                             <div className="referral-signup-btn-container">
                                                 <a
-                                                    href="https://forms.gle/5pZki48D7K7TiK9B9"
+                                                    href="https://forms.gle/XKVF5uAg7BtHJPh18"
                                                     target="_blank"
                                                     rel="noopener noreferrer"
                                                     className="referral-signup-btn"
@@ -101,7 +101,7 @@ export default function ReferralOfferPage() {
                                     <div className="referral-step-item">
                                         <div className="referral-step-num">৩</div>
                                         <div className="referral-step-body">
-                                            <p>সাবমিট করার পর নতুন গ্রাহককে <strong>Rm Communication Ltd</strong> থেকে সংযোগ নিয়ে বিস্তারিত জানানো হবে।</p>
+                                            <p>সাবমিট করার পর নতুন গ্রাহককে <strong>Bitnetworkbd Ltd</strong> থেকে সংযোগ নিয়ে বিস্তারিত জানানো হবে।</p>
                                         </div>
                                     </div>
                                 </div>
@@ -182,7 +182,7 @@ export default function ReferralOfferPage() {
                                     <span className="icon-badge-inline"><CheckCircle2 size={16} /></span> শর্ত সমূহঃ
                                 </h4>
                                 <ol className="referral-terms-list">
-                                    <li>রেফারার কে অবশ্যই <strong>Rm Communication Ltd</strong> ইউজার হতে হবে।</li>
+                                    <li>রেফারার কে অবশ্যই <strong>Bitnetworkbd Ltd</strong> ইউজার হতে হবে।</li>
                                     <li>কানেকশন চার্জ এর ক্ষেত্রে ডিস্কাউন্ট আমাদের Economy বা তার পরের প্যাকেজগুলোর ক্ষেত্রে প্রযোজ্য।</li>
                                     <li>রেজিষ্ট্রেশন এর ক্ষেত্রে অবশ্যই ইউজার আইডি দিতে হবে।</li>
                                     <li>একজন গ্রাহক রেজিষ্ট্রেশন এর পর সংযোগ এক্টিভ হলেই সেটি একটি সাক্সেসফুল রেফার হিসেবে কাউন্ট হবে।</li>
@@ -202,7 +202,7 @@ export default function ReferralOfferPage() {
                                     <span>বিঃদ্রঃ</span>
                                 </div>
                                 <p>
-                                    Rm Communication Ltd এই রেফারাল প্রোগ্রামটির শর্ত এবং নিয়মাবলী সংযোগ, পরিবর্তন কিংবা বন্ধ করার অধিকার রাখে।
+                                    Bitnetworkbd Ltd এই রেফারাল প্রোগ্রামটির শর্ত এবং নিয়মাবলী সংযোগ, পরিবর্তন কিংবা বন্ধ করার অধিকার রাখে।
                                 </p>
                             </div>
 
@@ -228,7 +228,7 @@ export default function ReferralOfferPage() {
                                     <span className="share-btn-icon">f</span> Facebook-এ শেয়ার করুন
                                 </a>
                                 <a
-                                    href={`https://api.whatsapp.com/send?text=${encodeURIComponent('রেফার করুন, পুরষ্কার জিতুন! Rm Communication Ltd এর চমৎকার রেফারাল অফার দেখুন: ' + window.location.href)}`}
+                                    href={`https://api.whatsapp.com/send?text=${encodeURIComponent('রেফার করুন, পুরষ্কার জিতুন! Bitnetworkbd Ltd এর চমৎকার রেফারাল অফার দেখুন: ' + window.location.href)}`}
                                     target="_blank"
                                     rel="noopener noreferrer"
                                     className="share-btn share-btn--whatsapp"

@@ -1,5 +1,4 @@
 import { useLayoutEffect, useRef, useState } from 'react';
-import { Link } from 'react-router-dom';
 import { X, Zap } from 'lucide-react';
 import './TopBar.css';
 
@@ -31,9 +30,14 @@ export default function TopBar() {
           <Zap size={13} className="topbar__icon" />
           <span className="topbar__text">
             বাড়তি খরচ ছাড়াই আপনার ইন্টারনেট বিল পরিশোধ করুন — &nbsp;
-            <Link to="/pay-bill" className="topbar__link">
-              Pay Bill Online →
-            </Link>
+            <a
+              href="https://admin.msonlinebd.com/BillPayment/Index"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="topbar__link"
+            >
+              Pay Bill Now →
+            </a>
           </span>
         </div>
         <button

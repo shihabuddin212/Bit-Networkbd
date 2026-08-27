@@ -32,7 +32,7 @@ export default function IPv6Section() {
               One address at a time with IPv6
             </p>
             <p className="ipv6__desc">
-              Rm Communication is fully IPv6 enabled, ensuring your devices are future-proof
+              Bitnetworkbd is fully IPv6 enabled, ensuring your devices are future-proof
               and securely connected with the next-generation internet protocol.
             </p>
 

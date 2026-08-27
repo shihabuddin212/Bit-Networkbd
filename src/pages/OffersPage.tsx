@@ -32,7 +32,7 @@ export default function OffersPage() {
             Exclusive <span className="highlight">Offers</span> &amp; Packages
           </h1>
           <p className="page-hero__sub">
-            Save more with RM Communication Ltd.'s reward programs, prepayment campaigns, and free high-performance hardware bundles designed to maximize your digital budget.
+            Save more with Bitnetworkbd Ltd.'s reward programs, prepayment campaigns, and free high-performance hardware bundles designed to maximize your digital budget.
           </p>
         </div>
       </div>

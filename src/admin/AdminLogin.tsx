@@ -3,8 +3,8 @@ import { Wifi, Lock, Mail, AlertCircle } from 'lucide-react';
 import './admin.css';
 
 const ADMIN_CREDENTIALS = {
-    username: 'admin@rmcommunication.com',
-    password: 'rm@admin2026',
+    username: 'admin@bitnetworkbd.com',
+    password: 'Bit@admin1234',
 };
 
 interface AdminLoginProps {
@@ -28,6 +28,7 @@ export default function AdminLogin({ onLogin }: AdminLoginProps) {
                 password === ADMIN_CREDENTIALS.password
             ) {
                 localStorage.setItem('rm_admin_auth', 'true');
+                localStorage.setItem('rm_admin_auth_timestamp', Date.now().toString());
                 onLogin();
             } else {
                 setError('Invalid email or password. Please try again.');
@@ -44,7 +45,7 @@ export default function AdminLogin({ onLogin }: AdminLoginProps) {
                         <Wifi size={20} strokeWidth={2.5} />
                     </div>
                     <div className="admin-login-logo__text">
-                        <h2>RM Communication</h2>
+                        <h2>Bitnetworkbd</h2>
                         <p>Admin Control Panel</p>
                     </div>
                 </div>
@@ -69,7 +70,7 @@ export default function AdminLogin({ onLogin }: AdminLoginProps) {
                             <input
                                 type="email"
                                 className="admin-form-input"
-                                placeholder="admin@rmcommunication.com"
+                                placeholder="admin@bitnetworkbd.com"
                                 value={username}
                                 onChange={(e) => setUsername(e.target.value)}
                                 required
@@ -105,7 +106,7 @@ export default function AdminLogin({ onLogin }: AdminLoginProps) {
                 </form>
 
                 <p style={{ textAlign: 'center', fontSize: '0.75rem', color: 'var(--admin-text-muted)', marginTop: '1.5rem' }}>
-                    Protected admin area — RM Communication Ltd.
+                    Protected admin area — Bitnetworkbd Ltd.
                 </p>
             </div>
         </div>

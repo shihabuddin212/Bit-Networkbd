@@ -1,6 +1,5 @@
 import { useInView } from 'react-intersection-observer';
 import { Smartphone, Globe, Building, CreditCard, CheckCircle, ArrowRight } from 'lucide-react';
-import { Link } from 'react-router-dom';
 import './HowToPay.css';
 
 const methods = [
@@ -85,9 +84,14 @@ export default function HowToPay() {
               <p>Our support team is available 24/7 to assist you with any payment queries.</p>
             </div>
           </div>
-          <Link to="/pay-bill" className="btn btn-primary">
+          <a
+            href="https://admin.msonlinebd.com/BillPayment/Index"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="btn btn-primary"
+          >
             Pay Your Bill Now <ArrowRight size={16} />
-          </Link>
+          </a>
         </div>
       </div>
     </section>

@@ -22,7 +22,7 @@ export default function AboutPage() {
         <div className="page-hero__bg" />
         <div className="container">
           <span className="section-badge">About Us</span>
-          <h1 className="page-hero__title">We Are <span className="highlight">Rm Communication Ltd</span></h1>
+          <h1 className="page-hero__title">We Are <span className="highlight">Bitnetworkbd Ltd</span></h1>
           <p className="page-hero__sub">A trusted name in broadband internet and telecom solutions, committed to connecting Bangladesh with fast, reliable, and affordable internet.</p>
         </div>
       </div>
@@ -44,7 +44,7 @@ export default function AboutPage() {
             <div className={`about-mission__card ${inView ? 'animate-fade-in-up' : 'pre-animate'}`} style={{ animationDelay: '0.2s' }}>
               <div className="about-mission__icon"><Award size={24} strokeWidth={1.5} /></div>
               <h3>Our Values</h3>
-              <p>Reliability, transparency, customer-first service, and continuous innovation drive everything we do at Rm Communication Ltd.</p>
+              <p>Reliability, transparency, customer-first service, and continuous innovation drive everything we do at Bitnetworkbd Ltd.</p>
             </div>
           </div>
         </div>
@@ -59,7 +59,7 @@ export default function AboutPage() {
               Building Bangladesh's <span className="highlight">Digital Future</span>
             </h2>
             <p style={{ color: 'var(--color-text-secondary)', lineHeight: 1.8, marginBottom: '1.25rem' }}>
-              Founded in 2015, Rm Communication Ltd started with a simple goal: provide fast, reliable internet to Dhaka's underserved communities at fair prices. Over the years, we've grown from a small team of network enthusiasts to a fully licensed ISP serving thousands of homes and businesses.
+              Founded in 2015, Bitnetworkbd Ltd started with a simple goal: provide fast, reliable internet to Dhaka's underserved communities at fair prices. Over the years, we've grown from a small team of network enthusiasts to a fully licensed ISP serving thousands of homes and businesses.
             </p>
             <p style={{ color: 'var(--color-text-secondary)', lineHeight: 1.8 }}>
               Our fiber optic backbone, combined with 24/7 expert support, has made us one of the most trusted names in Bangladesh's internet industry. We continue to expand our network, improve our services, and invest in cutting-edge technology to deliver the best possible experience.
