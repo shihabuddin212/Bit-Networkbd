@@ -265,8 +265,9 @@ If your local project is already a Git repository and you want to connect and pu
 git add .
 git commit -m "Production release for Bitnetworkbd Ltd"
 
-# 2. Add remote origin URL
-git remote add origin https://github.com/shihabuddin212/Bit-Networkbd.git
+# 2. Set or update remote origin URL
+git remote set-url origin https://github.com/shihabuddin212/Bit-Networkbd.git
+# (Or if adding for the first time: git remote add origin https://github.com/shihabuddin212/Bit-Networkbd.git)
 
 # 3. Rename current branch to main
 git branch -M main
